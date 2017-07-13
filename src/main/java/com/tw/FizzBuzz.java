@@ -8,7 +8,7 @@ public class FizzBuzz {
     private final BuzzMatcher buzzMatcher = new BuzzMatcher();
     private final FizzMatcher fizzMatcher = new FizzMatcher();
     private final FizzBuzzMatcher fizzBuzzMatcher = new FizzBuzzMatcher(fizzMatcher, buzzMatcher);
-    private List<Matcher> matchers = Arrays.asList(fizzBuzzMatcher, buzzMatcher, fizzMatcher);
+    private List<Matcher> matchers = Arrays.asList(buzzMatcher, fizzBuzzMatcher, fizzMatcher);
 
     public FizzBuzz() {
         Collections.sort(matchers);
