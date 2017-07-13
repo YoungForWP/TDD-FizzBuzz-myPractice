@@ -29,4 +29,13 @@ public class FizzBuzzMatcher implements Matcher {
     public String getText() {
         return "FizzBuzz";
     }
+
+    @Override
+    public int priority() {
+        int result = 0;
+        for (Matcher matcher : matchers) {
+            result += matcher.priority();
+        }
+        return result;
+    }
 }

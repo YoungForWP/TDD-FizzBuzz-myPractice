@@ -13,4 +13,8 @@ public class BuzzMatcher implements Matcher {
     public String getText() {
         return "Buzz";
     }
+    @Override
+    public int priority(){
+        return 1;
+    }
 }

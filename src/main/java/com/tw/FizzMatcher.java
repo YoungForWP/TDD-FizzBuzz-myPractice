@@ -13,4 +13,9 @@ public class FizzMatcher implements Matcher {
     public String getText() {
         return "Fizz";
     }
+
+    @Override
+    public int priority() {
+        return 0;
+    }
 }
