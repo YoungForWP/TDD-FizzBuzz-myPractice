@@ -1,22 +1,22 @@
 package com.tw;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class FizzBuzz {
     private final FizzBuzzMatcher fizzBuzzMatcher = new FizzBuzzMatcher();
     private final BuzzMatcher buzzMatcher = new BuzzMatcher();
     private final FizzMatcher fizzMatcher = new FizzMatcher();
+    private List<Matcher> matchers = Arrays.asList(fizzBuzzMatcher, buzzMatcher, fizzMatcher);
 
     public FizzBuzz() {
     }
 
     public String count(int number) {
-        if (fizzBuzzMatcher.isMatchedFizzBuzz(number)) {
-            return fizzBuzzMatcher.getText();
-        }
-        if (fizzMatcher.isMatchedFizz(number)) {
-            return fizzMatcher.getText();
-        }
-        if (buzzMatcher.isMatchedBuzz(number)) {
-            return buzzMatcher.getText();
+        for (Matcher matcher : matchers) {
+            if (matcher.isMatched(number)) {
+                return matcher.getText();
+            }
         }
         return String.valueOf(number);
     }

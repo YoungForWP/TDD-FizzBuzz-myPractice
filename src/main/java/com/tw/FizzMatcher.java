@@ -1,14 +1,16 @@
 package com.tw;
 
-public class FizzMatcher {
+public class FizzMatcher implements Matcher {
     public FizzMatcher() {
     }
 
-    boolean isMatchedFizz(int number) {
+    @Override
+    public boolean isMatched(int number) {
         return number % 3 == 0;
     }
 
-    String getText() {
+    @Override
+    public String getText() {
         return "Fizz";
     }
 }
