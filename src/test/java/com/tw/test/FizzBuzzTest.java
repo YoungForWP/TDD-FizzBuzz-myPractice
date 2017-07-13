@@ -22,4 +22,9 @@ public class FizzBuzzTest {
     public void test_when_number_is_3() throws Exception {
         assertEquals("Fizz", fizzBuzz.count(3));
     }
+
+    @Test
+    public void test_when_number_is_5() throws Exception {
+        assertEquals("Buzz", fizzBuzz.count(5));
+    }
 }
