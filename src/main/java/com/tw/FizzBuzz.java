@@ -1,18 +1,22 @@
 package com.tw;
 
 public class FizzBuzz {
+    private final FizzBuzzMatcher fizzBuzzMatcher = new FizzBuzzMatcher();
+    private final BuzzMatcher buzzMatcher = new BuzzMatcher();
+    private final FizzMatcher fizzMatcher = new FizzMatcher();
+
     public FizzBuzz() {
     }
 
     public String count(int number) {
-        if (number % 3 == 0 && number % 5 == 0) {
-            return "FizzBuzz";
+        if (fizzBuzzMatcher.isMatchedFizzBuzz(number)) {
+            return fizzBuzzMatcher.getText();
         }
-        if (number % 3 == 0) {
-            return "Fizz";
+        if (fizzMatcher.isMatchedFizz(number)) {
+            return fizzMatcher.getText();
         }
-        if (number % 5 == 0) {
-            return "Buzz";
+        if (buzzMatcher.isMatchedBuzz(number)) {
+            return buzzMatcher.getText();
         }
         return String.valueOf(number);
     }
