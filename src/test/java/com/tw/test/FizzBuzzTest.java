@@ -27,4 +27,9 @@ public class FizzBuzzTest {
     public void test_when_number_is_5() throws Exception {
         assertEquals("Buzz", fizzBuzz.count(5));
     }
+
+    @Test
+    public void test_when_number_is_15() throws Exception {
+        assertEquals("FizzBuzz", fizzBuzz.count(15));
+    }
 }
