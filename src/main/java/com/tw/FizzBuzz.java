@@ -14,12 +14,12 @@ public class FizzBuzz {
     }
 
     public String count(int number) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         for (Matcher matcher : matchers) {
             if (matcher.isMatched(number)) {
-                result += matcher.getText();
+                result.append(matcher.getText());
             }
         }
-        return result.isEmpty() ? String.valueOf(number) : result;
+        return (result.length() == 0) ? String.valueOf(number) : result.toString();
     }
 }
