@@ -7,7 +7,8 @@ import java.util.List;
 public class FizzBuzz {
     private final BuzzMatcher buzzMatcher = new BuzzMatcher();
     private final FizzMatcher fizzMatcher = new FizzMatcher();
-    private List<Matcher> matchers = Arrays.asList(buzzMatcher, fizzMatcher);
+    private final WhizzMatcher whizzMatcher = new WhizzMatcher();
+    private List<Matcher> matchers = Arrays.asList(buzzMatcher, fizzMatcher, whizzMatcher);
 
     public FizzBuzz() {
         Collections.sort(matchers);
@@ -22,4 +23,5 @@ public class FizzBuzz {
         }
         return (result.length() == 0) ? String.valueOf(number) : result.toString();
     }
+
 }

@@ -32,4 +32,28 @@ public class FizzBuzzTest {
     public void test_when_number_is_15() throws Exception {
         assertEquals("FizzBuzz", fizzBuzz.count(15));
     }
+
+    @Test
+    public void test_output_should_be_Whizz() throws Exception {
+        assertEquals("Whizz", fizzBuzz.count(7));
+        assertEquals("Whizz", fizzBuzz.count(14));
+    }
+
+    @Test
+    public void test_output_should_be_FizzWhizz() throws Exception {
+        assertEquals("FizzWhizz", fizzBuzz.count(21));
+        assertEquals("FizzWhizz", fizzBuzz.count(42));
+    }
+
+    @Test
+    public void test_output_should_be_BuzzWhizz() throws Exception {
+        assertEquals("BuzzWhizz", fizzBuzz.count(35));
+        assertEquals("BuzzWhizz", fizzBuzz.count(70));
+    }
+
+    @Test
+    public void test_output_should_be_FizzBuzzWhizz() throws Exception {
+        assertEquals("FizzBuzzWhizz", fizzBuzz.count(105));
+        assertEquals("FizzBuzzWhizz", fizzBuzz.count(210));
+    }
 }

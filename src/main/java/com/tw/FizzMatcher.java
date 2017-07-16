@@ -16,6 +16,6 @@ public class FizzMatcher implements Matcher {
 
     @Override
     public int priority() {
-        return 2;
+        return 0;
     }
 }
