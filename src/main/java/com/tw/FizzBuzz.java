@@ -5,9 +5,9 @@ import java.util.Collections;
 import java.util.List;
 
 public class FizzBuzz {
-    private final BuzzMatcher buzzMatcher = new BuzzMatcher();
-    private final FizzMatcher fizzMatcher = new FizzMatcher();
-    private final WhizzMatcher whizzMatcher = new WhizzMatcher();
+    private final Matcher buzzMatcher = Matcher.buzz();
+    private final Matcher fizzMatcher = Matcher.fizz();
+    private final Matcher whizzMatcher = Matcher.whizz();
     private List<Matcher> matchers = Arrays.asList(buzzMatcher, fizzMatcher, whizzMatcher);
 
     public FizzBuzz() {
