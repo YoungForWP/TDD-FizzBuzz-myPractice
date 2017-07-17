@@ -16,6 +16,18 @@ public class FizzBuzz {
 
     public String count(int number) {
         StringBuilder result = new StringBuilder();
+        String[] digits = String.valueOf(number).split("");
+        for (String digit : digits) {
+            if (digit.equals("3")) {
+                return "Fizz";
+            }
+            if (digit.equals("5")) {
+                return "Buzz";
+            }
+            if (digit.equals("7")) {
+                return "Whizz";
+            }
+        }
         for (Matcher matcher : matchers) {
             if (matcher.isMatched(number)) {
                 result.append(matcher.getText());
