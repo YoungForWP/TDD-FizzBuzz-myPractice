@@ -22,7 +22,7 @@ public class DigitMatcher {
         return  new DigitMatcher("7", "Whizz");
     }
 
-    boolean isMatched(String digit) {
+    boolean contains(String digit) {
         return digit.equals(this.digit);
     }
 

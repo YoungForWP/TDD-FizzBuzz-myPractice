@@ -38,7 +38,7 @@ public class FizzBuzz {
         String[] digits = String.valueOf(number).split("");
         for (String digit : digits) {
             for (DigitMatcher digitMatcher : digitMatchers) {
-                if (digitMatcher.isMatched(digit)) {
+                if (digitMatcher.contains(digit)) {
                     return digitMatcher.getText();
                 }
             }
