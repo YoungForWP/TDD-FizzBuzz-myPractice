@@ -1,6 +1,6 @@
 package com.tw;
 
-public class DigitMatcher {
+class DigitMatcher {
 
     private final String digit;
     private final String text;
@@ -14,11 +14,11 @@ public class DigitMatcher {
         return  new DigitMatcher("3", "Fizz");
     }
 
-    public static DigitMatcher buzz() {
+    static DigitMatcher buzz() {
         return  new DigitMatcher("5", "Buzz");
     }
 
-    public static DigitMatcher whizz() {
+    static DigitMatcher whizz() {
         return  new DigitMatcher("7", "Whizz");
     }
 

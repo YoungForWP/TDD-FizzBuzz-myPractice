@@ -5,7 +5,7 @@ public class Matcher implements Comparable {
     private final String text;
     private final int priority;
 
-    Matcher(int modulus, String text, int priority) {
+    private Matcher(int modulus, String text, int priority) {
         this.modulus = modulus;
         this.text = text;
         this.priority = priority;
@@ -26,15 +26,15 @@ public class Matcher implements Comparable {
     }
 
 
-    public boolean isMatched(int number) {
+    boolean isMatched(int number) {
         return number % modulus == 0;
     }
 
-    public String getText() {
+    String getText() {
         return text;
     }
 
-    public int priority(){
+    private int priority(){
         return priority;
     }
 
